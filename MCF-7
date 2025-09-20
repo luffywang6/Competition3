@@ -1,0 +1,25 @@
+E:\Anaconda\envs\SBAG\python.exe "D:\桌面\SBAG_defense - code\SBAG_defense.py"
+Namespace(backdoor_dir_name='models\\MCF-7\\backdoor', batch_size=32, clean_dir_name='models\\MCF-7\\clean', config_file='configs\\MCF-7_config.json', dataset='MCF-7', device=device(type='cuda'), lr=0.01, max_epoch=100, min_label_occ_num=30, num_hidden_channel=32, num_hidden_layer=1, plot_dirname='plots', threshold_high=0.8, threshold_low=0.2, train_size=0.8)
+
+clean accuracy: 91.74%
+count the total occurrence number of each node label: 100%|██████████| 22216/22216 [00:00<00:00, 54584.41it/s]
+current target--0:   0%|          | 0/19760 [00:00<?, ?it/s]Start explaining the model--------------------
+current target--0: 100%|██████████| 19760/19760 [1:49:03<00:00,  3.02it/s]
+current target--1: 100%|██████████| 2456/2456 [12:06<00:00,  3.38it/s]
+Finish explaining the model, see results in plots/MCF-7_xxx.png
+Backdoor detected!
+trigger node label: 12, target class: 1
+Removing backdoor by retraining the model--------------------
+Epoch: 000, train loss: 0.2909
+Epoch: 010, train loss: 0.2779
+Epoch: 020, train loss: 0.2767
+Epoch: 030, train loss: 0.2763
+Epoch: 040, train loss: 0.2763
+Epoch: 050, train loss: 0.2763
+Epoch: 060, train loss: 0.2761
+Epoch: 070, train loss: 0.2769
+Epoch: 080, train loss: 0.2759
+Epoch: 090, train loss: 0.2771
+After removing backdoor, benign accuracy: 91.50%, backdoor ASR: 0.00%
+
+Process finished with exit code 0

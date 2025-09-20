@@ -1,0 +1,24 @@
+Namespace(backdoor_dir_name='models\\AIDS\\backdoor', batch_size=32, clean_dir_name='models\\AIDS\\clean', config_file='configs\\AIDS_config.json', dataset='AIDS', device=device(type='cuda'), lr=0.01, max_epoch=100, min_label_occ_num=30, num_hidden_channel=32, num_hidden_layer=1, plot_dirname='plots', threshold_high=0.8, threshold_low=0.2, train_size=0.8)
+
+clean accuracy: 99.25%
+count the total occurrence number of each node label: 100%|██████████| 1600/1600 [00:00<00:00, 48485.21it/s]
+current target--0:   0%|          | 0/361 [00:00<?, ?it/s]Start explaining the model--------------------
+current target--0: 100%|██████████| 361/361 [02:00<00:00,  3.00it/s]
+current target--1: 100%|██████████| 1239/1239 [06:38<00:00,  3.11it/s]
+Finish explaining the model, see results in plots/AIDS_xxx.png
+Backdoor detected!
+trigger node label: 11, target class: 0
+Removing backdoor by retraining the model--------------------
+Epoch: 000, train loss: 0.2813
+Epoch: 010, train loss: 0.0671
+Epoch: 020, train loss: 0.0575
+Epoch: 030, train loss: 0.0685
+Epoch: 040, train loss: 0.0558
+Epoch: 050, train loss: 0.0605
+Epoch: 060, train loss: 0.0497
+Epoch: 070, train loss: 0.0490
+Epoch: 080, train loss: 0.0517
+Epoch: 090, train loss: 0.0514
+After removing backdoor, benign accuracy: 97.94%, backdoor ASR: 0.00%
+
+Process finished with exit code 0

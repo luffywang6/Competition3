@@ -1,0 +1,6 @@
+{
+    "dataset_name": "MCF-7",
+    "num_node_labels": 46,
+    "ground-truth trigger node": 12,
+    "ground-truth target class": 1
+}

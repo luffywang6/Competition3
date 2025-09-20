@@ -1,0 +1,6 @@
+{
+    "dataset_name": "AIDS",
+    "num_node_labels": 38,
+    "ground-truth trigger node": 11,
+    "ground-truth target class": 0
+}

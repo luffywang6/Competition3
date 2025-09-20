@@ -1,0 +1,25 @@
+E:\Anaconda\envs\SBAG\python.exe "D:\桌面\SBAG_defense - code\SBAG_defense.py"
+Namespace(backdoor_dir_name='models\\Mutagenicity\\backdoor', batch_size=32, clean_dir_name='models\\Mutagenicity\\clean', config_file='configs\\Mutagenicity_config.json', dataset='Mutagenicity', device=device(type='cuda'), lr=0.01, max_epoch=100, min_label_occ_num=30, num_hidden_channel=32, num_hidden_layer=1, plot_dirname='plots', threshold_high=0.8, threshold_low=0.2, train_size=0.8)
+
+clean accuracy: 71.08%
+count the total occurrence number of each node label: 100%|██████████| 3469/3469 [00:00<00:00, 55952.23it/s]
+current target--0:   0%|          | 0/1852 [00:00<?, ?it/s]Start explaining the model--------------------
+current target--0: 100%|██████████| 1852/1852 [09:38<00:00,  3.20it/s]
+current target--1: 100%|██████████| 1617/1617 [08:27<00:00,  3.19it/s]
+Finish explaining the model, see results in plots/Mutagenicity_xxx.png
+Backdoor detected!
+trigger node label: 6, target class: 1
+Removing backdoor by retraining the model--------------------
+Epoch: 000, train loss: 0.6480
+Epoch: 010, train loss: 0.5650
+Epoch: 020, train loss: 0.5564
+Epoch: 030, train loss: 0.5473
+Epoch: 040, train loss: 0.5434
+Epoch: 050, train loss: 0.5371
+Epoch: 060, train loss: 0.5393
+Epoch: 070, train loss: 0.5340
+Epoch: 080, train loss: 0.5326
+Epoch: 090, train loss: 0.5322
+After removing backdoor, benign accuracy: 73.79%, backdoor ASR: 71.43%
+
+Process finished with exit code 0

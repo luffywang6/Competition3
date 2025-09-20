@@ -1,0 +1,6 @@
+{
+    "dataset_name": "Mutagenicity",
+    "num_node_labels": 14,
+    "ground-truth trigger node": 6,
+    "ground-truth target class": 1
+}
